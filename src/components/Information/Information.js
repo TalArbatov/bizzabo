@@ -5,6 +5,8 @@ import Venue from './Venue';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { addToFavorites, removeFromFavorites } from '../../actions/events';
+import { StyledInformation } from '../../styled';
+import Button from '@material-ui/core/Button';
 
 const Information = () => {
   const dispatch = useDispatch();
@@ -27,7 +29,7 @@ const Information = () => {
 
   const renderInfo = () => {
     return Object.keys(event).length !== 0 ? ( // TODO: validate object type as well
-      <div>
+      <StyledInformation className="event-info-sub-column">
         <Event 
           title={ event.title } 
           date={ event.datetime } 
@@ -35,8 +37,8 @@ const Information = () => {
           url={ event.url } />
         <Venue venue={ event.venue }/>
         <SpecialOffers offers={ event.offers }/>
-        { !inFavorites ? <button onClick={ handleAddToFavorites }>Add to favorites</button> : <button onClick={ handleRemoveFromFavorites }>Remove from favorites</button> }
-      </div>
+        { !inFavorites ? <Button variant="contained" onClick={ handleAddToFavorites }>Add to favorites</Button> : <Button variant="contained" onClick={ handleRemoveFromFavorites }>Remove from favorites</Button> }
+      </StyledInformation>
     ) : <div></div>
   }
   return renderInfo();

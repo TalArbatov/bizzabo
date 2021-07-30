@@ -1,4 +1,6 @@
 import React from 'react';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 const Event = ({
   title,
@@ -6,9 +8,11 @@ const Event = ({
   displayEvent
 }) => {
   return (
-    <div onClick={ () => displayEvent(id) }>
-      <p>{ title }</p>
-    </div>
+    <Card className="event-card" onClick={ () => displayEvent(id) }>
+      <CardContent>
+        <span>{ title }</span> 
+      </CardContent>
+    </Card>
   )
 };
 

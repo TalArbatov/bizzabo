@@ -5,7 +5,14 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    .event-card {
+      margin-bottom: 20px;
+      background-color: #fafafa;
+      width: 100%;
+      
+    }
   }
+  
 `;
 
 export const StyledWrapper = styled.div`
@@ -15,10 +22,10 @@ export const StyledWrapper = styled.div`
   > div {
     width: 100%;
     box-sizing: border-box;
-    padding: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    padding: 25px 60px;
   }
 `;
 
@@ -41,6 +48,7 @@ export const StyledInfoRow = styled.div`
     width: 150px;
     height: 150px;
     background-size: cover;
+    object-fit: cover;
     border-radius: 10px;
     margin-right: 10px;
   }
@@ -50,4 +58,26 @@ export const StyledInfoRow = styled.div`
   }
   justify-content: start;
   align-items: center;
+`;
+
+export const StyledInformation = styled.div`
+  .event-info-sub-column {
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+`;
+
+export const StyledFavorites = styled.div`
+  .favorite-card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-right: 15px;
+      margin-bottom: 20px;
+    }
+  }
 `;
