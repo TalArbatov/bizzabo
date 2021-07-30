@@ -15,7 +15,7 @@ const EventList = ({
           title={ event.title }/>
       )}
     </div>
-  )
+  );
 };
 
 export default EventList;

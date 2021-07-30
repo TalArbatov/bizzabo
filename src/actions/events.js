@@ -5,14 +5,13 @@ import {
   SET_FAVORITES
 } from "./action-types";
 
-export const updateEvent = event => {
-  return {
-    type: UPDATE_EVENT,
-    payload: {
-      event
-    }
-  };
-};
+export const updateEvent = event => ({
+  type: UPDATE_EVENT,
+  payload: {
+    event
+  }
+});
+
 
 export const addToFavorites = event => ({
   type: ADD_TO_FAVORITES,

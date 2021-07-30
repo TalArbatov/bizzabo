@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import config from '../../config';
 import { getArtistUrl, getArtistEventsUrl } from '../../utils';
 import InfoRow from './InfoRow';
 import { StyledInfo } from '../../styled';
@@ -24,23 +23,15 @@ const Info = ({
   const fetchArtist = () => {
     artistName !== '' && axios.get(getArtistUrl(artistName), { params: { app_id: '123' } })
     .then(res => {
-      if (res.data) {
-        setArtist(res.data);
-      } else {
-        console.log('no such artist as', artistName);
-      }
-    })
+        res.data && setArtist(res.data);
+    });
   }
 
   const fetchEvents = () => {
     artistName !== '' && axios.get(getArtistEventsUrl(artistName), { params: { app_id: '123' } })
     .then(res => {
-      if (res.data) {
-        setEvents(res.data);
-      } else {
-        console.log('no events for', artistName);
-      }
-    })
+        res.data && setEvents(res.data); 
+    });
   }
 
   const displayEvent = eventId => {
@@ -54,14 +45,14 @@ const Info = ({
         <InfoRow src={ artist.image_url } name={ artist.name }/>
         <EventList events={ events } displayEvent={ eventId => displayEvent(eventId) }/>
       </>
-    ) : <div></div>
+    ) : <div></div>;
   };
 
   return (
     <StyledInfo>
       { renderInfo() }
     </StyledInfo>
-  )
+  );
 };
 
 export default Info;

@@ -1,5 +1,5 @@
 import config from './config';
 
-export const getArtistUrl = artist => `${config.api}/artists/${artist}`;
+export const getArtistUrl = artist => `${config.API_URL}/artists/${artist}`;
 
-export const getArtistEventsUrl = artist => `${config.api}/artists/${artist}/events`;
+export const getArtistEventsUrl = artist => `${config.API_URL}/artists/${artist}/events`;

@@ -8,9 +8,9 @@ const InfoRow = ({
   return (
     <StyledInfoRow>
       <img src={ src } />
-      <span>{ name }</span> 
+      <span>{ name }</span>
     </StyledInfoRow>
-  )
+  );
 };
 
 export default InfoRow;

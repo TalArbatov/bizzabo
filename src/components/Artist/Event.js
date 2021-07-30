@@ -13,7 +13,7 @@ const Event = ({
         <span>{ title === '' ? <i>No name</i> : title }</span> 
       </CardContent>
     </Card>
-  )
+  );
 };
 
 export default Event;

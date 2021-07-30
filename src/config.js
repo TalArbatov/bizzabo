@@ -1,5 +1,6 @@
 const config = {
-  api: 'https://rest.bandsintown.com'
+  API_URL: 'https://rest.bandsintown.com',
+  DEBOUNCE_TIME: 200
 };
 
 export default config;
