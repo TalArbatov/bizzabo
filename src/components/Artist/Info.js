@@ -48,10 +48,21 @@ const Info = ({
     dispatch(updateEvent(selectedEvent));
   };
 
+  const renderInfo = () => {
+    console.log('tal1', artist);
+    console.log('tal1', Object.keys(artist))
+    console.log('tal1', Object.keys(artist) !== 0)
+    return Object.keys(artist).length !== 0 ? (
+      <>
+        <InfoRow src={ artist.image_url } name={ artist.name }/>
+        <EventList events={ events } displayEvent={ eventId => displayEvent(eventId) }/>
+      </>
+    ) : <div></div>
+  };
+
   return (
     <StyledInfo>
-      <InfoRow src={ artist.image_url } name={ artist.name }/>
-      <EventList events={ events } displayEvent={ eventId => displayEvent(eventId) }/>
+      { renderInfo() }
     </StyledInfo>
   )
 };

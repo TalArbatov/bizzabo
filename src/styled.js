@@ -22,6 +22,12 @@ export const StyledWrapper = styled.div`
   }
 `;
 
+export const StyledSearch = styled.div`
+  .search-input {
+    width: 100%;
+  }
+`;
+
 export const StyledInfo = styled.div`
   width: 100%;
 `;
@@ -29,12 +35,19 @@ export const StyledInfo = styled.div`
 export const StyledInfoRow = styled.div`
   width: 100%;
   display: flex;
+  padding: 30px 0;
   flex-direction: row;
   img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-size: cover;
+    border-radius: 10px;
+    margin-right: 10px;
   }
-  justify-content: space-between;
+  span {
+    font-size: 25px;
+    font-style: italic
+  }
+  justify-content: start;
   align-items: center;
 `;

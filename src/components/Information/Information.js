@@ -37,7 +37,7 @@ const Information = () => {
         <SpecialOffers offers={ event.offers }/>
         { !inFavorites ? <button onClick={ handleAddToFavorites }>Add to favorites</button> : <button onClick={ handleRemoveFromFavorites }>Remove from favorites</button> }
       </div>
-    ) : null
+    ) : <div></div>
   }
   return renderInfo();
 };
