@@ -1,11 +1,9 @@
 import React from 'react';
-import Search from './components/Artist/Search';
+import Wrapper from './components/Wrapper';
 
 const App = () => {
   return (
-    <div>
-      <Search />
-    </div>
+    <Wrapper />
   )
 };
 

@@ -1,3 +1,5 @@
 import config from './config';
 
-export const getArtist = artist => `${config.api}/artists/${artist}`;
+export const getArtistUrl = artist => `${config.api}/artists/${artist}`;
+
+export const getArtistEventsUrl = artist => `${config.api}/artists/${artist}/events`;
