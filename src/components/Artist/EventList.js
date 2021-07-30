@@ -2,12 +2,18 @@ import React from 'react';
 import Event from './Event';
 
 const EventList = ({
-  events = []
+  events = [],
+  displayEvent
 }) => {
-  console.log('tal2', events);
   return (
     <div>
-      { events.map(event => <Event key={ event.id } title={ event.title }/>) }
+      { events.map(event => 
+        <Event 
+          key={ event.id } 
+          displayEvent={ eventId => displayEvent(eventId) }
+          id={ event.id }
+          title={ event.title }/>
+      )}
     </div>
   )
 };

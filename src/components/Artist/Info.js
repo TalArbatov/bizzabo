@@ -5,10 +5,14 @@ import { getArtistUrl, getArtistEventsUrl } from '../../utils';
 import InfoRow from './InfoRow';
 import { StyledInfo } from '../../styled';
 import EventList from './EventList';
+import { useDispatch } from 'react-redux';
+import { updateEvent } from '../../actions/events';
 
 const Info = ({
   artistName
 }) => {
+  const dispatch = useDispatch();
+
   const [artist, setArtist] = useState({});
   const [events, setEvents] = useState([]);
 
@@ -21,7 +25,6 @@ const Info = ({
     artistName !== '' && axios.get(getArtistUrl(artistName), { params: { app_id: '123' } })
     .then(res => {
       if (res.data) {
-        console.log(res.data);
         setArtist(res.data);
       } else {
         console.log('no such artist as', artistName);
@@ -33,18 +36,22 @@ const Info = ({
     axios.get(getArtistEventsUrl(artistName), { params: { app_id: '123' } })
     .then(res => {
       if (res.data) {
-        console.log('tal1', res.data);
         setEvents(res.data);
       } else {
-        console.log('no such artist as', artistName);
+        console.log('no events for', artistName);
       }
     })
   }
 
+  const displayEvent = eventId => {
+    const selectedEvent = events.find(event => event.id === eventId);
+    dispatch(updateEvent(selectedEvent));
+  };
+
   return (
     <StyledInfo>
       <InfoRow src={ artist.image_url } name={ artist.name }/>
-      <EventList events={ events }/>
+      <EventList events={ events } displayEvent={ eventId => displayEvent(eventId) }/>
     </StyledInfo>
   )
 };

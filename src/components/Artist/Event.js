@@ -1,10 +1,12 @@
 import React from 'react';
 
 const Event = ({
-  title
+  title,
+  id,
+  displayEvent
 }) => {
   return (
-    <div>
+    <div onClick={ () => displayEvent(id) }>
       <p>{ title }</p>
     </div>
   )
