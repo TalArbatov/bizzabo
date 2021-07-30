@@ -1,5 +1,5 @@
 const config = {
-  api: 'https://rest.bandsintown.com/'
+  api: 'https://rest.bandsintown.com'
 };
 
 export default config;
