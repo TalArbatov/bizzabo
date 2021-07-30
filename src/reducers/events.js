@@ -1,6 +1,7 @@
 import { 
   ADD_TO_FAVORITES, 
   REMOVE_FROM_FAVORITES, 
+  SET_FAVORITES, 
   UPDATE_EVENT
 } from "../actions/action-types";
 
@@ -28,6 +29,11 @@ const eventsReducer = (state = defaultState, action) => {
       return {
         ...state,
         favorites: state.favorites.filter(event => event.id !== action.payload.eventId)
+      }  
+    case SET_FAVORITES:
+      return {
+        ...state,
+        favorites: action.payload.favorites
       }  
     default:
       return state;

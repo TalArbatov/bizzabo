@@ -27,6 +27,10 @@ export const StyledWrapper = styled.div`
     align-items: start;
     padding: 25px 60px;
   }
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+  }
+  
 `;
 
 export const StyledSearch = styled.div`
@@ -70,14 +74,29 @@ export const StyledInformation = styled.div`
 `;
 
 export const StyledFavorites = styled.div`
-  .favorite-card-content {
+  > div {
+    width: 100%;
+  }
+  .favorite-card-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    img {
+    .favorite-card-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .star-icon {
       margin-right: 15px;
       margin-bottom: 20px;
+    }
+    .trashcan-icon {
+      height: 20px;
+      width: 20px;
+      margin-left: 5px;
+      cursor: pointer;
     }
   }
 `;

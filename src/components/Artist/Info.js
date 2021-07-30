@@ -33,7 +33,7 @@ const Info = ({
   }
 
   const fetchEvents = () => {
-    axios.get(getArtistEventsUrl(artistName), { params: { app_id: '123' } })
+    artistName !== '' && axios.get(getArtistEventsUrl(artistName), { params: { app_id: '123' } })
     .then(res => {
       if (res.data) {
         setEvents(res.data);
@@ -49,10 +49,7 @@ const Info = ({
   };
 
   const renderInfo = () => {
-    console.log('tal1', artist);
-    console.log('tal1', Object.keys(artist))
-    console.log('tal1', Object.keys(artist) !== 0)
-    return Object.keys(artist).length !== 0 ? (
+    return artistName !== '' && Object.keys(artist).length !== 0 ? (
       <>
         <InfoRow src={ artist.image_url } name={ artist.name }/>
         <EventList events={ events } displayEvent={ eventId => displayEvent(eventId) }/>

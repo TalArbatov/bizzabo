@@ -15,13 +15,16 @@ const Information = () => {
   const favorites = useSelector(state => state.events.favorites);
 
   const handleAddToFavorites = () => {
-    dispatch(addToFavorites({
+    const eventToSave = {
       id: event.id,
       title: event.title
-    }));
+    };
+    localStorage.setItem('favorites', JSON.stringify([eventToSave, ...favorites]));
+    dispatch(addToFavorites(eventToSave));
   };
 
   const handleRemoveFromFavorites = () => {
+    localStorage.setItem('favorites', JSON.stringify(favorites.filter(event => event.id !== event.id)))
     dispatch(removeFromFavorites(event.id));
   };
 
