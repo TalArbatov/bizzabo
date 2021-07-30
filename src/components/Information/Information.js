@@ -24,7 +24,7 @@ const Information = () => {
   };
 
   const handleRemoveFromFavorites = () => {
-    localStorage.setItem('favorites', JSON.stringify(favorites.filter(event => event.id !== event.id)))
+    localStorage.setItem('favorites', JSON.stringify(favorites.filter(event => event.id !== event.id)));
     dispatch(removeFromFavorites(event.id));
   };
 
@@ -42,7 +42,7 @@ const Information = () => {
         <SpecialOffers offers={ event.offers }/>
         { !inFavorites ? <Button variant="contained" onClick={ handleAddToFavorites }>Add to favorites</Button> : <Button variant="contained" onClick={ handleRemoveFromFavorites }>Remove from favorites</Button> }
       </StyledInformation>
-    ) : <div></div>
+    ) : <div></div>;
   }
   return renderInfo();
 };

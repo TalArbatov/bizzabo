@@ -32,8 +32,7 @@ const Event = ({
         </div>
       </CardContent>
     </Card>
-    
-  )
+  );
 };
 
 export default Event;

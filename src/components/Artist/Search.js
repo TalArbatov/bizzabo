@@ -10,11 +10,10 @@ const Search = () => {
 
   const handleSetArtistName = _.debounce(name => {
     setArtistName(name);
-  }, config.DEBOUNCE_TIME)
+  }, config.DEBOUNCE_TIME);
 
   return (
     <StyledSearch>
-      {/* <input type="text" value={ artistName } placeholder="Search artist..." onChange={ e => setArtistName(e.target.value) }/> */}
       <TextField className="search-input" label="Search artists..." variant="outlined" onChange={ e => handleSetArtistName(e.target.value) }/>
       <Info artistName={ artistName }/>
     </StyledSearch>

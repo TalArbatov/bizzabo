@@ -11,7 +11,7 @@ const Wrapper = () => {
       <Information />
       <Favorites />
     </StyledWrapper>
-  )
+  );
 };
 
 export default Wrapper;

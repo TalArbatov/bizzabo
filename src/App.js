@@ -8,7 +8,7 @@ const App = () => {
       <GlobalStyle />
       <Wrapper />
     </div>
-  )
+  );
 };
 
 export default App;

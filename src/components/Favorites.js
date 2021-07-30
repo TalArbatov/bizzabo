@@ -48,7 +48,7 @@ const Favorites = () => {
         </div>
     </StyledFavorites>
     );
-  }
+  };
   return renderFavorites();
 };
 
