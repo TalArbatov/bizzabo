@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledInfoRow } from '../../styled';
+import { StyledInfoRow } from '../../styles';
 
 const InfoRow = ({
   src = '',

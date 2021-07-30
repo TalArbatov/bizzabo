@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrapper from './components/Wrapper';
-import { GlobalStyle } from './styled';
+import { GlobalStyle } from './styles';
 
 const App = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyledFavorites } from '../styled';
+import { StyledFavorites } from '../styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import { setFavorites } from '../actions/events';

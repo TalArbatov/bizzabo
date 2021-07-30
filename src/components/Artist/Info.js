@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { getArtistUrl, getArtistEventsUrl } from '../../utils';
 import InfoRow from './InfoRow';
-import { StyledInfo } from '../../styled';
+import { StyledInfo } from '../../styles';
 import EventList from './EventList';
 import { useDispatch } from 'react-redux';
 import { updateEvent } from '../../actions/events';

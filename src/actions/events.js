@@ -12,7 +12,6 @@ export const updateEvent = event => ({
   }
 });
 
-
 export const addToFavorites = event => ({
   type: ADD_TO_FAVORITES,
   payload: {

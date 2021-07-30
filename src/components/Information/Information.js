@@ -5,7 +5,7 @@ import Venue from './Venue';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { addToFavorites, removeFromFavorites } from '../../actions/events';
-import { StyledInformation } from '../../styled';
+import { StyledInformation } from '../../styles';
 import Button from '@material-ui/core/Button';
 
 const Information = () => {

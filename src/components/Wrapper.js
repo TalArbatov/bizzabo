@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './Artist/Search';
 import Favorites from './Favorites';
-import { StyledWrapper } from '../styled';
+import { StyledWrapper } from '../styles';
 import Information from './Information/Information';
 
 const Wrapper = () => {

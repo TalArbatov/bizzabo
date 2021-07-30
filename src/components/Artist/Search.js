@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Info from './Info';
 import TextField from '@material-ui/core/TextField';
-import { StyledSearch } from '../../styled';
+import { StyledSearch } from '../../styles';
 import _ from 'lodash';
 import config from '../../config';
 
