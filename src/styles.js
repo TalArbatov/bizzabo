@@ -28,7 +28,6 @@ export const StyledWrapper = styled.div`
   @media screen and (max-width: 992px) {
     flex-direction: column;
   }
-  
 `;
 
 export const StyledSearch = styled.div`
