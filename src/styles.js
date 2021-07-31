@@ -9,10 +9,8 @@ export const GlobalStyle = createGlobalStyle`
       margin-bottom: 20px;
       background-color: #fafafa;
       width: 100%;
-      
     }
   }
-  
 `;
 
 export const StyledWrapper = styled.div`
